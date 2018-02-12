@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	  <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+        	{{ form.game_id }}
+        </p>
+        <a href="{{ url_for('game_new') }}">Add a game</a>
+        <p>
+            {{ form.location.label }}<br>
+            {{ form.location }}<br>
+        </p>
+        <p>
+            {{ form.timestamp.label }}<br>
+            {{ form.timestamp }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

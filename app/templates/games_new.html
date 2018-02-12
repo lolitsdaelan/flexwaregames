@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+	 <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title }}<br>
+        </p>
+        <p>
+            {{ form.description.label }}<br>
+            {{ form.description }}<br>
+        </p>
+        <p>
+            {{ form.comments.label }}<br>
+            {{ form.comments }}<br>
+        </p>
+        <p>
+            {{ form.players_min.label }}<br>
+            {{ form.players_min }}<br>
+        </p>
+        <p>
+            {{ form.players_max.label }}<br>
+            {{ form.players_max }}<br>
+        </p>
+        <p>
+            {{ form.playtime.label }}<br>
+            {{ form.playtime }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

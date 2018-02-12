@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h1>Hello, {{ current_user.username }}!</h1>
+	{% for game in games %}
+		<div><p>
+			<b>{{ game.title }}: </b>{{ game.desc }}
+		</p></div>
+	{% endfor %}
+
+{% endblock %}
